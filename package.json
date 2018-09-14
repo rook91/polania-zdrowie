@@ -1,0 +1,40 @@
+{
+  "name": "polania-zdrowie",
+  "version": "1.0.0",
+  "description": "polania-zdrowie",
+  "main": "index.js",
+  "scripts": {
+    "analyzeReact": "npm run analyze:webpack && npm run analyze:resultsReact",
+    "analyze:webpack": "webpack -p --json --progress --profile > webpack-build-log.json",
+    "analyze:resultsReact": "webpack-bundle-analyzer webpack-build-log.json distReact",
+    "dist": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rook91/min-react-app.git"
+  },
+  "keywords": [
+    "react",
+    "app"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rook91/min-react-app/issues"
+  },
+  "homepage": "https://github.com/rook91/min-react-app#readme",
+  "dependencies": {
+    "react": "16.5.1",
+    "react-dom": "16.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.0.1",
+    "@babel/preset-env": "7.0.0",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.2",
+    "babel-plugin-transform-react-jsx": "6.24.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "webpack": "4.19.0",
+    "webpack-bundle-analyzer": "3.0.2",
+    "webpack-cli": "3.1.0"
+  }
+}
