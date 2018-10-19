@@ -7,7 +7,8 @@
     "analyzeReact": "npm run analyze:webpack && npm run analyze:resultsReact",
     "analyze:webpack": "webpack -p --json --progress --profile > webpack-build-log.json",
     "analyze:resultsReact": "webpack-bundle-analyzer webpack-build-log.json distReact",
-    "dist": "webpack -p"
+    "dist": "webpack -p",
+    "start:dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   },
   "homepage": "https://github.com/rook91/min-react-app#readme",
   "dependencies": {
+    "@material-ui/core": "^3.0.3",
+    "prop-types": "^15.6.2",
     "react": "16.5.1",
     "react-dom": "16.5.1"
   },
@@ -35,6 +38,7 @@
     "copy-webpack-plugin": "^4.5.2",
     "webpack": "4.19.0",
     "webpack-bundle-analyzer": "3.0.2",
-    "webpack-cli": "3.1.0"
+    "webpack-cli": "3.1.0",
+    "webpack-dev-server": "^3.1.8"
   }
 }
