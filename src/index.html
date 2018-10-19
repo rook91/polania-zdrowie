@@ -1,12 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>App</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="cache-control" content="no-store" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta name="keywords" content="polania-zdrowie, gabinet profilaktyki, polania zdrowie, polania, Polania, POLANIA, gabinet, GABINET, PROFILAKTYki, profilaktyki">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabinet profilaktyki zdrowia Polania</title>
+  <link rel="stylesheet" href="css/main.css" media="screen" />
 </head>
+
 <body>
-    <div id="main"></div>
+  <!-- <div id="adminPnl" class="col-lg-5" style="font-size: 20px; background-color: white; display:none; position: absolute; z-index: 9999999; top: 29px;">
+    <div class="col-lg-12">
+      <p> Czcionka
+        <select id="fontSelector" style="font-size: 20px;">
+          <option value="MadrasExtraLight">MadrasExtraLight</option>
+          <option value="MadrasExtraBoldItalic">MadrasExtraBoldItalic</option>
+        </select>
+    </div>
+    <button type="button" id="confirmBtn" class="btn btn-success">OK</button>
+  </div> -->
+  <header id="hs_header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 clearfix">
+          <div class="col-lg-2 col-md-2 col-sm-12">
+            <a href="index.html" style="padding-top: 5px">
+              <img src="./img/logo_150_80.png" alt="logo" width="150" height="80"> </a>
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <!--mobile-->
+            <!--<button type="button" class="hs_nav_toggle navbar-toggle" data-toggle="collapse"-->
+            <!--data-target="#bs-example-navbar-collapse-1">Menu<i class="fa fa-bars"></i></button>-->
+            <nav>
+              <ul class="hs_menu collapse navbar-collapse">
+                <li><a class="active MadrasExtraBoldItalicFont" href="index.html">Strona główna</a></li>
+                <li><a class="MadrasExtraBoldItalicFont" href="o_firmie.html">O firmie</a>
+                  <li><a class="MadrasExtraBoldItalicFont" href="nasza_oferta.html">Nasza oferta</a>
+                    <ul>
+                      <li><a href="analiza_wlosow.html">Analiza włosów</a></li>
+                      <li><a href="body_detox.html">Body detox</a></li>
+                      <li><a href="food_detective.html">Food detective</a></li>
+                      <li><a href="monitoring_odzywienia_organizmu.html">Monitoring odżywienia organizmu</a></li>
+                      <li><a href="naturalne_suplementy.html">Naturalne suplementy</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="MadrasExtraBoldItalicFont" href="literatura.html">Literatura</a></li>
+                  <li><a class="MadrasExtraBoldItalicFont" href="cennik.html">Cennik</a></li>
+                  <li><a class="MadrasExtraBoldItalicFont" href="kontakt.html">Kontakt</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- <div class="col-lg-2 col-md-2 col-sm-12">
+            <button type="button" id="adminBtn" class="btn btn-success">A</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--Main page slider-->
+  <div class="sliderWrapper">
+    <div class="mp_image">
+      <div style="position: absolute; width: 100%; height: 100%; background-color:grey;opacity: 0.3;"></div>
+      <h3 class="mp_h2 MadrasExtraLightFont">Gram profilaktyki jest lepszy niż kilogram leczenia</h3>
+      <img src="img/strona_glowna/main1_1500x500.jpg" style="width:100%; height:100%;" alt="img1">
+    </div>
+    <div class="mp_image">
+      <div style="position: absolute; width: 100%; height: 100%; background-color:grey;opacity: 0.3;"></div>
+      <h3 class="mp_h2 MadrasExtraLightFont">Wspierać zdrowie i nie godzić się z chorobą</h3>
+      <img src="img/strona_glowna/main1_1500x500.jpg" style="width:100%; height:100%;" alt="img1">
+    </div>
+  </div>
+
+  <!--Main container-->
+  <div class="container">
+    <div class="t_margin_30"></div>
+
+    <!--Welcome text-->
+    <div>
+      <p class="mp_topText MadrasExtraBoldItalicFont">Witamy na stronie Gabinetu Profilaktyki POLANIA </p>
+      <p class="mp_topText MadrasExtraLightFont">Prowadzimy unikalny program profilaktyki mający na celu utrzymywanie organizmu w zdrowiu i pełnej homeostazie. Przywrócenie równowagi metabolicznej w organizmie i oczyszczenie go z toksyn pozwoli na zabezpieczenie go przed chorobami i podniesienie
+        odporności organizmu czyli utrzymaniu w zdrowiu.
+      </p>
+    </div>
+
+    <!--Basic exams-->
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="hs_service">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 MadrasExtraBoldItalicFont">
+              <h3>Analiza pierwiastkowa włosów</h3>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="imgView" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 31.814 31.815" style="enable-background:new 0 0 31.814 31.815;" xml:space="preserve"
+              class="detail convertSvgInline replaced-svg" data-id="46102" data-kw="biology">
+                <g>
+                  <path d="M31.814,13.411c0-1.133-0.916-2.049-2.048-2.049c-1.131,0-2.048,0.916-2.048,2.049c0,0.538,0.21,1.026,0.55,1.392   l-0.852,1.444c-0.142-0.031-0.287-0.049-0.438-0.049c-0.828,0-1.539,0.492-1.861,1.201h-2.029   c-0.301-0.656-0.934-1.127-1.686-1.191l-0.883-1.509c0.285-0.354,0.457-0.801,0.457-1.288c0-0.468-0.158-0.896-0.421-1.24   l0.902-1.536c0.024,0.001,0.048,0.003,0.073,0.003c1.131,0,2.047-0.916,2.047-2.047s-0.916-2.048-2.047-2.048   s-2.049,0.917-2.049,2.048c0,0.44,0.141,0.848,0.379,1.183l-0.92,1.589c-0.004,0-0.009,0-0.014,0c-0.836,0-1.553,0.501-1.871,1.217   l-2.278,0.013c-0.315-0.723-1.034-1.227-1.872-1.229l-0.898-1.551c0.354-0.369,0.573-0.868,0.573-1.42   c0-0.474-0.161-0.906-0.431-1.254l0.847-1.46c1.086-0.05,1.952-0.944,1.952-2.044c0-1.131-0.917-2.047-2.048-2.047   s-2.048,0.916-2.048,2.047c0,0.511,0.188,0.977,0.497,1.335l-0.812,1.375c-0.001,0-0.003,0-0.005,0c-0.87,0-1.611,0.544-1.908,1.31   H6.269c-0.341-0.659-1.027-1.11-1.819-1.11c-1.131,0-2.049,0.917-2.049,2.048S3.319,10.64,4.45,10.64   c0.786,0,1.468-0.442,1.812-1.094h2.58c0.317,0.466,0.823,0.792,1.407,0.874l1.03,1.746c-0.266,0.346-0.425,0.776-0.425,1.247   c0,0.492,0.175,0.944,0.465,1.297l-0.882,1.495c-0.786,0.036-1.456,0.516-1.766,1.196H6.312C5.989,16.692,5.278,16.2,4.45,16.2   c-1.131,0-2.049,0.917-2.049,2.048c0,0.494,0.177,0.949,0.47,1.305l-0.894,1.561C0.879,21.151,0,22.051,0,23.159   c0,1.131,0.917,2.047,2.048,2.047s2.048-0.916,2.048-2.047c0-0.494-0.174-0.946-0.465-1.299l0.891-1.565   c0.719-0.026,1.342-0.421,1.688-1.003h2.564c0.32,0.539,0.879,0.92,1.532,0.992l0.956,1.651c-0.255,0.341-0.408,0.763-0.408,1.224   c0,0.511,0.188,0.978,0.498,1.336l-0.95,1.642c-1.069,0.067-1.915,0.954-1.915,2.04c0,1.132,0.916,2.049,2.047,2.049   s2.048-0.917,2.048-2.049c0-0.529-0.202-1.01-0.532-1.373l0.502-0.867c0,0,0.001,0.002,0.002,0.002l0.426-0.734   c0.762-0.028,1.416-0.473,1.744-1.109h2.384c0.329,0.643,0.987,1.084,1.752,1.109l0.896,1.55c-0.357,0.368-0.579,0.87-0.579,1.424   c0,1.132,0.917,2.049,2.049,2.049s2.048-0.917,2.048-2.049c0-1.06-0.808-1.933-1.84-2.036l-0.951-1.65   c0.309-0.357,0.494-0.821,0.494-1.33c0-0.463-0.154-0.885-0.412-1.229l0.965-1.657c0.619-0.092,1.148-0.461,1.457-0.98h2.233   c0.356,0.601,1.011,1.006,1.761,1.006c1.131,0,2.047-0.917,2.047-2.049c0-0.301-0.065-0.586-0.183-0.842l1.123-1.957   C31.004,15.347,31.814,14.473,31.814,13.411z M18.928,21.179c-0.843,0-1.566,0.437-1.881,1.164h-2.266   c-0.314-0.728-1.038-1.235-1.88-1.235c-0.024,0-0.048,0.002-0.073,0.004l-0.82-1.445c0.354-0.367,0.573-0.869,0.573-1.42   c0-0.521-0.196-0.996-0.517-1.356l0.829-1.433c0.003,0,0.005,0.001,0.008,0.001c0.794,0,1.481-0.453,1.821-1.114h2.384   c0.328,0.64,0.982,1.082,1.743,1.109l0.829,1.452c-0.312,0.359-0.502,0.828-0.502,1.342c0,0.559,0.225,1.101,0.586,1.471   l-0.831,1.463C18.931,21.179,18.929,21.179,18.928,21.179z"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 MadrasExtraLightFont">
+              <p>Analiza pierwiastkowa włosów obrazuje niedobory i nadmiary składników odżywczych w organizmie.</p>
+              <a href="analiza_wlosow.html" class="btn btn-success" style="margin: 7px auto">Dowiedz się więcej</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="hs_service">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 MadrasExtraBoldItalicFont">
+              <h3>Monitoring odżywienia organizmu</h3>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="imgView" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 97.301 97.302" style="display: block;" xml:space="preserve" class="detail convertSvgInline replaced-svg"
+              data-id="48634" data-kw="patient1" fill="#000000">
+                <g>
+                  <g>
+                    <path d="M51.583,45.473c-10.849,2.372-16.271-2.68-16.553-2.95c-1.37-1.367-3.587-1.379-4.97-0.021    c-1.393,1.366-1.414,3.604-0.048,4.996c0.271,0.276,5.706,5.671,16.019,5.671c2.144,0,4.499-0.231,7.062-0.793    c1.906-0.417,3.112-2.302,2.695-4.206C55.372,46.263,53.488,45.058,51.583,45.473z"
+                    style="" fill=""></path>
+                    <circle cx="19.541" cy="36.265" r="7.948" style="" fill=""></circle>
+                    <path d="M93.032,68.812l-14.885-6.012c-0.516-0.207-1.066-0.314-1.621-0.314h-3.793v-0.824c0-0.422-0.109-0.814-0.291-1.165    l14.032,3.829c0.371,0.101,0.744,0.15,1.111,0.15c1.85,0,3.545-1.23,4.056-3.102c0.612-2.242-0.709-4.557-2.951-5.167    l-18.484-5.046c-0.367-0.1-0.728-0.149-1.13-0.148l-12.601,0.062c-0.587,1.387-1.812,2.48-3.391,2.826    c-2.079,0.455-4.195,0.686-6.292,0.686c-10.229,0-17.198-5.469-17.489-5.702c-1.002-0.799-1.634-1.941-1.777-3.215    c-0.145-1.275,0.216-2.53,1.017-3.534c0.916-1.15,2.286-1.809,3.757-1.809c1.074,0,2.131,0.367,2.976,1.034    c0.142,0.11,2.877,2.199,7.226,3.151l-7.761-5.004c-2.736-1.766-6.12-0.547-8.106,1.332c0,0-0.664,0.567-1.13,1.326    c-0.446,0.726-0.794,1.631-0.794,1.631L24.7,43.819c-0.899,2.602-0.61,6.175,2.136,7.947l14.744,9.508    c0.175,0.113,0.354,0.215,0.532,0.305c0,0.027-0.008,0.055-0.008,0.082v0.824h-4.193l-19.614-13.61    c0.097-0.106,0.19-0.22,0.27-0.347c0.72-1.15,0.371-2.667-0.78-3.389l-6.677-4.182c-1.121-0.703-2.584-0.384-3.327,0.698    c-1.888-0.923-4.214-0.372-5.449,1.407c-1.363,1.964-0.876,4.662,1.089,6.025l30.665,21.285c0.724,0.504,1.586,0.772,2.468,0.772    h5.717c0.364,0.981,1.302,1.684,2.407,1.684h5.439V93.15H47.47c-1.146,0-2.074,0.93-2.074,2.076s0.929,2.075,2.074,2.075h20.133    c1.146,0,2.075-0.929,2.075-2.075s-0.93-2.076-2.075-2.076h-2.885V72.828h5.438c1.106,0,2.043-0.702,2.408-1.684h3.119    l14.105,5.697c0.53,0.215,1.079,0.316,1.618,0.316c1.716,0,3.336-1.024,4.017-2.709C96.32,72.23,95.25,69.708,93.032,68.812z"
+                    style="" fill=""></path>
+                    <path d="M33.716,34.479c0,1.86,1.508,3.367,3.366,3.367c7.871,0,12.233-2.105,15.077-4.597v5.456    c-0.254,1.096-0.72,3.132-1.27,5.574c0.211-0.042,0.419-0.076,0.63-0.122c0.342-0.075,0.688-0.112,1.033-0.112    c2.246,0,4.227,1.594,4.708,3.791c0.14,0.643,0.144,1.283,0.032,1.893l11.989-0.06c0.527,0,0.989,0.062,1.475,0.192l1.756,0.48    c-0.998-4.874-2.133-9.672-2.602-11.613v-6.485c1.288,2.681,2.092,6.522,2.01,12.41c-0.026,1.858,1.46,3.387,3.318,3.413    c0.018,0,0.032,0,0.049,0c1.837,0,3.34-1.476,3.363-3.319c0.225-16.004-8.188-24.596-15.5-26.364    c-0.008-0.002-0.016-0.002-0.021-0.004l-2.097,2.199l-2.159-2.175c-1.202,0.295-5.662,2.28-8.462,6.637    c-2.41,3.259-4.491,6.072-13.332,6.072C35.224,31.112,33.716,32.62,33.716,34.479z"
+                    style="" fill=""></path>
+                    <path d="M61.164,17.722c4.487,0,8.128-3.638,8.128-8.127c0-1.877-0.651-3.592-1.725-4.965h-2.628V3.397h1.444    c-0.506-0.425-1.056-0.799-1.654-1.092C64.113,0.949,62.75,0,61.166,0c-1.582,0-2.941,0.947-3.562,2.302    c-0.601,0.293-1.152,0.669-1.659,1.095h1.65V4.63H54.76c-1.068,1.373-1.722,3.088-1.722,4.965    C53.04,14.084,56.676,17.722,61.164,17.722z M61.166,1.714c1.219,0,2.208,0.99,2.208,2.208S62.384,6.13,61.166,6.13    c-1.217,0-2.206-0.99-2.206-2.208S59.949,1.714,61.166,1.714z"
+                    style="" fill=""></path>
+                    <path d="M38.269,22.976h-2.203V4.401H7.417v18.575H5.415v4.269h32.854V22.976z M33.67,6.797v8.25l-7.829,0.007    c-0.182,0-0.342,0.12-0.393,0.295l-1.147,3.895l-1.147-3.895c-0.051-0.175-0.212-0.295-0.395-0.295h-1.553l-2.27-6.779    c-0.112-0.335-0.668-0.335-0.78,0l-2.27,6.779H9.814V6.797H33.67z M9.814,22.176v-6.301h6.368c0.177,0,0.334-0.113,0.391-0.28    l1.973-5.896l1.974,5.896c0.056,0.167,0.214,0.28,0.39,0.28h1.543l1.454,4.938c0.052,0.175,0.212,0.295,0.395,0.295    s0.343-0.12,0.395-0.295l1.454-4.939l7.521-0.006v6.307L9.814,22.176L9.814,22.176z"
+                    style="" fill=""></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 MadrasExtraLightFont">
+              <p>Monitoring odżywienia organizmu – badanie żywej kropli krwi w kolorowym polu widzenia.</p>
+              <a href="monitoring_odzywienia_organizmu.html" class="btn btn-success" style="margin-top: 30px;
+    margin-bottom: 9px;">Dowiedz się więcej</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="hs_service">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8 MadrasExtraBoldItalicFont">
+              <h3 style="margin: 35px auto;">Food detective</h3>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="imgView" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 97.873 97.873" style="enable-background:new 0 0 97.873 97.873;" xml:space="preserve"
+              class="detail convertSvgInline replaced-svg" data-id="48693" data-kw="clinic3">
+                <g>
+                  <g>
+                    <path d="M78.25,3.39H61.887V2.276C61.887,1.019,60.866,0,59.609,0H38.265c-1.257,0-2.276,1.02-2.276,2.276V3.39H19.625    c-2.825,0-5.123,2.298-5.123,5.123V92.75c0,2.825,2.298,5.123,5.123,5.123h58.624c2.824,0,5.122-2.298,5.122-5.123V8.513    C83.372,5.688,81.074,3.39,78.25,3.39z M77.68,92.182H20.194v-83.1h15.795v0.681c0,1.257,1.02,2.277,2.276,2.277h21.344    c1.258,0,2.277-1.02,2.277-2.277V9.082H77.68V92.182z"></path>
+                    <rect x="29.206" y="53.869" width="39.462" height="7.968"></rect>
+                    <rect x="29.206" y="70.186" width="39.462" height="7.969"></rect>
+                    <polygon points="45.427,45.332 52.448,45.332 52.448,36.414 61.365,36.414 61.365,29.394 52.448,29.394 52.448,20.477     45.427,20.477 45.427,29.394 36.51,29.394 36.51,36.414 45.427,36.414   "></polygon>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 MadrasExtraLightFont">
+              <p>Food detective jest testem będącym badaniem w kierunku nietolerancji pokarmowej.</p>
+              <a href="food_detective.html" class="btn btn-success" style="margin: 13px auto;">Dowiedz się więcej</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!--What we do-->
+      <div class="col-lg-6 col-md-7 col-sm-12">
+        <h3 class="hs_heading">Czym się jeszcze zajmujemy</h3>
+
+        <div class="hs_tab">
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active">
+              <a href="#services1" data-toggle="tab">
+                <h5 style="color: black;">Naturalne suplementy</h5>
+              </a>
+            </li>
+            <li>
+              <a href="#services2" data-toggle="tab">
+                <h5 style="color: black;">Body detox</h5>
+              </a>
+            </li>
+            <li>
+              <a href="#services3" data-toggle="tab">
+                <h5 style="color: black;">Badanie aparatem S.A.M.</h5>
+              </a>
+            </li>
+          </ul>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="services1">
+              <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-0">
+                  <img style="margin-top: 30px;" width="228" height="252" src="img/naturalne_suplementy_image1.jpg" alt="">
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                  <h4 class="hs_theme_color">Naturalne suplementy</h4>
+                  <div class="hs_margin_30"></div>
+                  <p class="otherExams">
+                    Suplementy diety są dla ludzi chcących uniknąć choroby! Ludzie pierwotni spożywali dwieście roślin. Mięso dzikich zwierząt jadali sporadycznie. Osiadły tryb życia i ubogie kultury rolnicze przyczyniły się do zubożenia diety...
+                  </p>
+                  <a href="naturalne_suplementy.html" class="btn btn-success MadrasExtraLightFont">Dowiedz się więcej</a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="services2">
+              <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-0">
+                  <img style="margin-top: 30px;" width="228" height="252" src="img/BioEnergiser.jpg" alt="">
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-12">
+                  <h4 class="hs_theme_color">Body detox</h4>
+
+                  <div class="hs_margin_30"></div>
+                  <p class="otherExams">Jest to relaksujący 30-minutowy zabieg wymagający włożenia stóp do miski spa wypełnionej ciepłą posoloną wodą. Energizująca wkładka wytwarza strumień elektronów i pole bioenergetyczne, co sprawia, że leczenie jest przyjemne i relaksujące...
+                  </p>
+                  <a href="body_detox.html" class="btn btn-success MadrasExtraLightFont">Dowiedz się więcej</a></div>
+              </div>
+            </div>
+<div class="tab-pane fade" id="services3">
+  <div class="row">
+    <div class="col-lg-5 col-md-5 col-sm-0">
+      <img style="margin-top: 30px;" width="228" height="252" src="img/strona_glowna/aparatSAM.jpg" alt="">
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-12">
+      <h4 class="hs_theme_color">Badanie aparatem S.A.M.</h4>
+
+      <div class="hs_margin_30"></div>
+      <p class="otherExams">Korzystając z aparatu S.A.M. doswiadczony specjalista - konsultant ustali żródła problemu i zasugeruje personalne rozwiązania, które przywrócą Twojej skórze właściwy wygląd i blask...
+      </p>
+      <a href="body_detox.html" class="btn btn-success MadrasExtraLightFont">Dowiedz się więcej</a></div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--Book an Appointment-->
+      <div class="col-lg-6 col-md-5 col-sm-12">
+        <h3 class="hs_heading" id="hs_appointment_form_link">Umów się na wizytę</h3>
+
+        <div class="hs_appointment_form_div">
+          <img src="img/BODYKEY-by-Nutrilite.jpg" width="512" height="365" alt="">
+
+          <div class="hs_appointment_form">
+            <form method="post">
+              <div class="row">
+                <div class="col-lg-6 col-md-7 col-sm-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="slider_fname" name="fname" placeholder="Imię i Nazwisko" required="">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="slider_phone" name="phone" class="form-control" placeholder="Numer telefonu" required="">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" id="slider_email" name="email" class="form-control" placeholder="Email" required="">
+                  </div>
+                  <div class="form-group">
+                    <input type="date" id="slider_date" name="date" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-3">
+                  <button type="button" id="slider_book_apo" class="btn btn-success">Rezerwuj</button>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <p>Wszystkie pola są obowiązkowe.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <h4 class="hs_heading">Zaproszenia</h4>
+      <div class="row eventsSlider">
+        <div class="up_coming_events_slider_item col-lg-4">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="hs_event_date">
+                <h3>01</h3>
+                <p>Stycznia</p>
+              </div>
+            </div>
+          </div>
+          <div class="hs_event_div">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-5 col-sm-6">
+                  <img src="img/strona_glowna/CERT_mikroskopowa_analiza_krwi.jpg" alt=""> </div>
+                <div class="col-lg-6 col-md-7 col-sm-12">
+                  <h4>Spotkanie 1</h4>
+                  <p>Krótki opis spotkania 1. Będzie coś i coś i coś. Ja tam nie wiem :). Krótki opis spotkania 1. Będzie coś i coś i coś. Ja tam nie wiem :)</p>
+                  <a href="index.html" class="btn btn-success">Dowiedz się więcej</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="up_coming_events_slider_item col-lg-4">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="hs_event_date">
+                <h3>02</h3>
+                <p>Stycznia</p>
+              </div>
+            </div>
+          </div>
+          <div class="hs_event_div">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-5 col-sm-6">
+                  <img src="img/strona_glowna/CERT_mikroskopowa_analiza_krwi.jpg" alt=""> </div>
+                <div class="col-lg-6 col-md-7 col-sm-12">
+                  <h4>Spotkanie 2</h4>
+                  <p>Krótki opis spotkania 2. Będzie coś i coś i coś. Ja tam nie wiem :). Krótki opis spotkania 2. Będzie coś i coś i coś. Ja tam nie wiem :)</p>
+                  <a href="index.html" class="btn btn-success">Dowiedz się więcej</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="up_coming_events_slider_item col-lg-4">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="hs_event_date">
+                <h3>03</h3>
+                <p>Stycznia</p>
+              </div>
+            </div>
+          </div>
+          <div class="hs_event_div">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-5 col-sm-6">
+                  <img src="img/strona_glowna/CERT_mikroskopowa_analiza_krwi.jpg" alt=""> </div>
+                <div class="col-lg-6 col-md-7 col-sm-12">
+                  <h4>Spotkanie 3</h4>
+                  <p>Krótki opis spotkania 3. Będzie coś i coś i coś. Ja tam nie wiem :). Krótki opis spotkania 3. Będzie coś i coś i coś. Ja tam nie wiem :)</p>
+                  <a href="index.html" class="btn btn-success">Dowiedz się więcej</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="up_coming_events_slider_item col-lg-4">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="hs_event_date">
+                <h3>04</h3>
+                <p>Stycznia</p>
+              </div>
+            </div>
+          </div>
+          <div class="hs_event_div">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-6 col-md-5 col-sm-6">
+                  <img src="img/strona_glowna/CERT_mikroskopowa_analiza_krwi.jpg" alt=""> </div>
+                <div class="col-lg-6 col-md-7 col-sm-12">
+                  <h4>Spotkanie 4</h4>
+                  <p>Krótki opis spotkania 4. Będzie coś i coś i coś. Ja tam nie wiem :). Krótki opis spotkania 4. Będzie coś i coś i coś. Ja tam nie wiem :)</p>
+                  <a href="index.html" class="btn btn-success">Dowiedz się więcej</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!--Cooperate with-->
+    <div class="row">
+      <h3 class="hs_heading">Dołącz do Nas!</h3>
+      <div class="col-lg-12">
+        <p>Rozwijamy zespół osób zainteresowanych ideą zdrowia i profilaktyki chorób. W związku z tym, zapraszamy do współpracy wszystkich, którzy chcieliby założyć własny gabinet lub rozszerzyć usługi w obecnie prowadzonym gabinecie np. fizjoterapii, dietetyki,
+          salony odnowy biologicznej, fitness, siłownie, oraz lekarzy, których interesuje temat „profilaktyka chorób metabolicznych”.</p>
+      </div>
+      <div class="col-lg-6">
+        <p>Oferujemy: </p>
+        <p>• Wiedzę i pomoc w zakresie tworzenia profesjonalnej działalności</p>
+
+        <p>• Niskie koszty rozpoczęcia i brak kosztów licencyjnych</p>
+
+        <p>• Wsparcie istniejących gabinetów w zakresie rozszerzenia swoich usług</p>
+
+        <p>• System wykładów nt. profilaktyki zdrowia i urody w różnych miastach</p>
+
+        <p>• Szkolenia z zakresu naszych usług oraz metody pracy</p>
+
+        <p>• Sprawdzone i skuteczne metody działania , profilaktyki zdrowia</p>
+
+        <p>• Bezpośredni dostęp do producentów, dających gwarancję na produkty</p>
+
+        <p>• Materiały reklamowe</p>
+      </div>
+      <div class="col-lg-6">
+        <img style="width: 400px; margin-left: 45px;" src="img/strona_glowna/certyfikatWspolpracy.png" alt=""> </div>
+      <div class="col-lg-12">
+        <p>Współpracując z naszymi partnerami promujemy zdrowy styl życia i budujemy świadomość na temat zdrowego odżywiania i dbania o siebie. Doświadczenie pozwoliło nam rozszerzyć nasze działania i zacząć współpracę z lekarzami, laboratoriami i firmami,
+          które tak jak my wspierają naturalne metody profilaktyczne. Wszystkie oferowane przez nas rozwiązania promują naturę i ekologię.</p>
+      </div>
+    </div>
+  </div>
+  <div class="hs_margin_60"></div>
+  </div>
+  <footer id="hs_footer">
+    <div class="container">
+      <div class="hs_footer_content">
+        <div class="row">
+          <div class="row">
+            <div class="hs_footer_about_us">
+              <div class="col-lg-2 col-md-4 col-sm-12 col-md-12 col-sm-12">
+                <h4 class="hs_heading">O Nas</h4>
+                <a href="./index.html">
+                  <img src="./img/logo_150_80.png" alt="logo" width="150" height="80">
+                </a>
+              </div>
+              <div class="col-lg-7 col-md-8 col-sm-12 hs_about_us">
+                <div class="hs_margin_60"></div>
+                <p>Firma "POLANIA" zajmuje się profilaktyką zdrowia i promocją naturalnych suplementów żywieniowych, ekologicznych produktów podstawowego użytku. Sukcesywnie poszerzana jest oferta o nowe metody naturalnych terapii, indywidualnych badań oraz
+                  naturalnych suplementów o różnych formach działania. Od kilku lat we współpracy z laboratorium pierwiastków śladowych „Biomol-Med'' w Łodzi. Zabiega o dobry kontakt z klientem, doradza dobór odpowiednich badań nowatorskich w celu rozpoznania
+                  tendencji chorobowych zanim te rozwiną się i ujawnią np. przez ból. Naszym celem jest budowanie świadomości zdrowego stylu życia.</p>
+              </div>
+              <div class="col-lg-3">
+                <h4 class="hs_heading">Skontaktuj się z Nami!</h4>
+
+                <div class="hs_contact_detail">
+                  <p><i class="fa fa-map-marker"></i>Kraków, os. Bohaterów Września 3</p>
+                  <p><i class="fa fa-mobile-phone"></i> +48 503 671 782</p>
+                  <div class="clearfix"></div>
+                </div>
+                <h4 class="hs_heading">Licznik odwiedzin</h4>
+                <p><i class="fa fa-users" style="font-size: 1em; margin-right: 5px;"></i>
+                  <a href="http://www.licz.pl" title="Darmowe Liczniki" style="color: white; font-size: 18px;">
+                    <script src="http://www.licz.pl/counter.php?name=POLANIAZDROWIECOUNTER22&start=WARTOSC-STARTOWA"></script>
+                  </a>
+                  <a href="http://www.licz.pl">
+                    <img src="http://www.licz.pl/donotalterthecode.gif" width="5" height="5" border="0">
+                  </a>
+                </p>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 col-md-9 col-sm-12">
+              <h4 class="hs_heading">Przydatne linki</h4>
+
+              <div class="clearfix"></div>
+              <div class="hs_footer_link">
+                <ul>
+                  <li><a href="http://www.biomol.pl/">BiolMed</a></li>
+                </ul>
+              </div>
+              <div class="hs_footer_link">
+                <ul>
+                  <li><a href="https://bodykey.pl/public/">BodyKey</a></li>
+                </ul>
+              </div>
+              <div class="hs_footer_link">
+                <ul>
+                  <li><a href="http://www.licz.pl/">Licz.pl</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.js"></script>
+  <script type="text/javascript" src="./js/slick.js"></script>
+  <script type="text/javascript" src="./js/custom.js"></script>
 </body>
-<script src="bundle.js"></script>
+
 </html>

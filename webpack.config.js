@@ -25,7 +25,15 @@ module.exports = [{
     },
     plugins: [
         new CopyWebpackPlugin([{
-            from: './src/index.html'
+            from: './src/index.html',
+            to: '../',
+        },{
+            from: './src/quantum_analyzer.html',
+            to: '../',
+        },{
+            from: './src/old-src',
+            to: '../',
+            toType: 'dir'
         }]),
         new webpack.LoaderOptionsPlugin({
             minimize: true,
@@ -38,7 +46,7 @@ module.exports = [{
         new webpack.optimize.ModuleConcatenationPlugin()
     ],
     output: {
-        path: __dirname + '/dist',
+        path: __dirname + '/dist/js',
         publicPath: '/',
         filename: 'bundle.js'
     },

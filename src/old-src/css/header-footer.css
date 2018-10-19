@@ -1,0 +1,366 @@
+/******************header start*******************/
+#hs_header {
+    background: #5cb85c;
+    width: 100%;
+    -webkit-box-shadow: 0 1px 10px rgba(0,1,1,.2);
+    -moz-box-shadow: 0 1px 10px rgba(0,1,1,.2);
+    box-shadow: 0 1px 10px rgba(0,1,1,.2);
+    position: relative;
+}
+#hs_header.fixed {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 500 !important;
+}
+#hs_header.fixed #hs_header-top {
+    display: none;
+}
+#hs_header #hs_header-top {
+    color: #fff;
+    line-height: 40px;
+    font-size: 12px;
+}
+#hs_header #hs_header-top a {
+    line-height: 40px;
+    display: inline-block;
+    margin: 0;
+}
+#hs_header #hs_header-top .hs_header-text a {
+    color: #e6e9ed;
+}
+#hs_header #hs_header-top .hs_header-text a:hover {
+    color: #fff;
+}
+#hs_header #hs_header-top .social-media {
+    float: right;
+    margin: 0;
+    height: 40px;
+}
+#hs_header #hs_header-top .social-media li {
+    display: inline-block;
+    margin-left: 8px;
+}
+#hs_header #hs_header-top .social-media li a {
+    color: #fff;
+    font-size: 13px;
+}
+
+#hs_logo {
+    margin: 17px 0 !important;
+}
+
+#hs_header a {
+    display: inline-block;
+    line-height: 20px;
+}
+
+
+/******************************************menu start**************************************************/
+#hs_header nav {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+#hs_header .hs_menu {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+#hs_header .hs_menu > li {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+#hs_header .hs_menu > li:last-child {
+    margin-right: 0;
+}
+#hs_header .hs_menu li > a {
+    margin: 27px 0 27px 0;
+    padding: 7px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 1px rgba(0,1,1,.2);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+}
+#hs_header.fixed .hs_menu li > a {
+    margin: 15px 0 15px 0;
+}
+#hs_header.fixed .hs_social ul {
+    margin: 17px auto;
+}
+#hs_header .hs_menu li > ul li a {
+    color: #727278 !important;
+}
+#hs_header .hs_menu li:hover {
+    background: #FFF;
+}
+#hs_header .hs_menu li:hover a {
+    color: #5cb85c;
+    -webkit-transition-duration: 0.01s;
+    -moz-transition-duration: 0.01s;
+    -o-transition-duration: 0.01s;
+    -ms-transition-duration: 0.01s;
+    transition-duration: 0.01s;
+}
+#hs_header .hs_menu li > ul {
+    list-style: none;
+    position: absolute;
+    padding-left: 0px;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    z-index: 500;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    border-top-width: 4px;
+    background: #5cb85c;
+}
+#hs_header .hs_menu li > ul:before,
+#hs_header .hs_menu li > ul:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+}
+#hs_header .hs_menu li > ul:before {
+}
+#hs_header .hs_menu li > ul:after {
+    left: 17px;
+    margin-top: 2px;
+}
+#hs_header .hs_menu li > ul li {
+    position: relative;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e2e2e2;
+}
+#hs_header .hs_menu li > ul li:hover {
+    background: #f4f4f4;
+}
+#hs_header .hs_menu li > ul li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+#hs_header .hs_menu li > ul li > ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-top: 0;
+}
+#hs_header .hs_menu li > ul li > ul:before,
+#hs_header .hs_menu li > ul li > ul:after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+#hs_header .hs_menu li > ul li > ul:before {
+    top: 15px;
+    border-width: 0 16px 16px 0;
+}
+#hs_header .hs_menu li > ul li > ul:after {
+    top: 15px;
+    margin-left: 4px;
+}
+#hs_header .hs_menu li > ul li a {
+    width: 200px;
+    margin: 0 0 0 0;
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 15px;
+}
+#hs_header .hs_menu li > ul li a.active,
+#hs_header .hs_menu li > ul li:hover > a {
+    color: #5cb85c !important;
+    border: none;
+}
+/* hover states */
+#hs_header .hs_menu li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    background: #fff;
+    padding-left: 0;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.5);
+}
+#hs_header .hs_menu li > ul li:hover > ul {
+    margin-left: 0;
+    margin-top: 0;
+}
+#hs_header #searchform .form-group {
+    margin: 19.5px 0;
+}
+#hs_header.fixed #searchform .form-group {
+    margin: 9.5px 0;
+}
+/* responsive hs_menu */
+.hs_nav_toggle {
+    width: 100%;
+    float: left;
+    text-align: left;
+    background: #5cb85c !important;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.hs_nav_toggle > i {
+    font-size: 19px;
+    float: right;
+}
+#hs_header .hs_menu li > ul > li > ul > li:first-child.fa-chevron-right:before {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    color: #5cb85c;
+}
+/******************************************menu end**************************************************/
+
+/******************************************logo start**************************************************/
+#hs_header #hs_logo {
+    margin: 27px 0;
+    cursor: pointer;
+}
+#hs_header #hs_logo a img {
+    width: 100%;
+}
+#hs_header.fixed #hs_logo {
+    margin: 15px 0;
+}
+/******************************************logo end**************************************************/
+/******************************************Footer**************************************************/
+#hs_footer {
+    width: 100%;
+    float: left;
+    color: #fff;
+    background: #5cb85c;
+}
+#hs_footer .hs_footer_content .hs_footer_menu {
+    width: 100%;
+    float: left;
+}
+#hs_footer .hs_footer_content .hs_footer_menu ul {
+    list-style: none;
+    padding-left: 0px;
+    width: 100%;
+    text-align: center;
+}
+#hs_footer .hs_footer_content .hs_footer_menu ul li {
+    display: inline-block;
+    margin-right: -2px;
+    width: 16.2%;
+}
+#hs_footer .hs_footer_content .hs_footer_menu ul li a {
+    padding: 15px 0px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    background: rgba(0,0,0,0.2);
+    color: inherit;
+}
+#hs_footer .hs_footer_content .hs_footer_menu ul li a:hover {
+    background: rgba(0,0,0,0.25);
+    color: #fff;
+}
+#hs_footer .hs_footer_content h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+}
+#hs_footer .hs_footer_content h4::before {
+    border-color: #fff;
+}
+
+.hs_footer_about_us {
+    width: 100%;
+    float: left;
+    padding: 10px 0px;
+    position: relative;
+}
+.hs_footer_about_us:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 96%;
+    margin-left: 15px;
+    height: 1px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.hs_about_us img {
+    margin-bottom: 20px;
+}
+
+.hs_about_us p {
+    padding: 10px 20px;
+    border-left: 1px solid rgba(0,0,0,0.2);
+}
+.hs_about_us p i {
+    font-size: 22px;
+    padding-right: 15px;
+    float: left;
+}
+
+.hs_contact_detail p i {
+    font-size: 25px;
+    float: left;
+    width: 20px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 0;
+}
+/****************************************** end Footer**************************************************/
+
+
+.hs_heading {
+    color: #5cb85c;
+    margin: 30px auto;
+    padding-bottom: 15px;
+    border-bottom-width: 50%;
+    position: relative;
+}
+.hs_heading:before {
+    content : "";
+    position: absolute;
+    left : 0;
+    bottom : 0;
+    height : 2px;
+    width : 65px;
+    border-bottom: 2px solid #7f9aa0;
+}
+
+.hs_footer_link {
+    float: left;
+    margin-right: 45px;
+    margin-bottom: 20px;
+}
+.hs_footer_link ul {
+    list-style: none;
+    padding-left: 0px;
+}
+.hs_footer_link ul li {
+    margin-bottom: 5px;
+}
+.hs_footer_link ul li a {
+    color: inherit;
+}
+.hs_footer_link ul li a:hover {
+    text-decoration: underline;
+}
