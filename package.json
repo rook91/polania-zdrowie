@@ -7,9 +7,9 @@
     "analyzeReact": "npm run analyze:webpack && npm run analyze:resultsReact",
     "analyze:webpack": "webpack -p --json --progress --profile > webpack-build-log.json",
     "analyze:resultsReact": "webpack-bundle-analyzer webpack-build-log.json distReact",
-    "dist": "webpack -p",
-    "prepare": "npm run dist",
-    "start:dev": "webpack-dev-server"
+    "build": "webpack --config webpack.prod.config.js",
+    "prepare": "npm run build",
+    "start:dev": "webpack-dev-server --config webpack.dev.config.js --content-base dev/"
   },
   "repository": {
     "type": "git",
