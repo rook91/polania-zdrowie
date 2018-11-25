@@ -26,6 +26,7 @@
   "homepage": "https://github.com/rook91/min-react-app#readme",
   "dependencies": {
     "@material-ui/core": "3.5.1",
+    "@material-ui/icons": "^3.0.1",
     "prop-types": "15.6.2",
     "react": "16.6.3",
     "react-dom": "16.6.3"
