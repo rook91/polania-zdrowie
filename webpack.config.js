@@ -28,9 +28,6 @@ module.exports = [{
             from: './src/index.html',
             to: '../',
         },{
-            from: './src/quantum_analyzer.html',
-            to: '../',
-        },{
             from: './src/old-src',
             to: '../',
             toType: 'dir'

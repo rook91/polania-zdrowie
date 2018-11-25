@@ -8,6 +8,7 @@
     "analyze:webpack": "webpack -p --json --progress --profile > webpack-build-log.json",
     "analyze:resultsReact": "webpack-bundle-analyzer webpack-build-log.json distReact",
     "dist": "webpack -p",
+    "prepare": "npm run dist",
     "start:dev": "webpack-dev-server"
   },
   "repository": {
@@ -24,21 +25,21 @@
   },
   "homepage": "https://github.com/rook91/min-react-app#readme",
   "dependencies": {
-    "@material-ui/core": "3.2.2",
-    "prop-types": "^15.6.2",
-    "react": "16.5.2",
-    "react-dom": "16.5.2"
+    "@material-ui/core": "3.5.1",
+    "prop-types": "15.6.2",
+    "react": "16.6.3",
+    "react-dom": "16.6.3"
   },
   "devDependencies": {
-    "@babel/core": "7.1.2",
-    "@babel/preset-env": "7.1.0",
+    "@babel/core": "7.1.6",
+    "@babel/preset-env": "7.1.6",
     "@babel/preset-react": "7.0.0",
     "babel-loader": "8.0.4",
     "babel-plugin-transform-react-jsx": "6.24.1",
-    "copy-webpack-plugin": "^4.5.4",
-    "webpack": "4.21.0",
+    "copy-webpack-plugin": "^4.6.0",
+    "webpack": "4.26.0",
     "webpack-bundle-analyzer": "3.0.3",
     "webpack-cli": "3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.10"
   }
 }
