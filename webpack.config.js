@@ -1,5 +1,6 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = [{
     entry: './src/index.jsx',
@@ -24,12 +25,13 @@ module.exports = [{
         extensions: ['*', '.js', '.jsx']
     },
     plugins: [
+        new CleanWebpackPlugin(['dist']),
         new CopyWebpackPlugin([{
             from: './src/index.html',
             to: '../',
         },{
-            from: './src/old-src',
-            to: '../',
+            from: './src/img',
+            to: '../img',
             toType: 'dir'
         }]),
         new webpack.LoaderOptionsPlugin({
@@ -45,6 +47,6 @@ module.exports = [{
     output: {
         path: __dirname + '/dist/js',
         publicPath: '/',
-        filename: 'bundle.js'
+        filename: 'bundle.min.js'
     },
 }];
