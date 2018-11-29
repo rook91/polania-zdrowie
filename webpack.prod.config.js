@@ -19,6 +19,15 @@ module.exports = [{
                         ]
                     }
                 }
+            }, {
+                test: /\.less$/,
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader'
+                }, {
+                    loader: 'less-loader'
+                }]
             }
         ]
     },
@@ -30,7 +39,7 @@ module.exports = [{
         new CopyWebpackPlugin([{
             from: './src/index.html',
             to: '../',
-        },{
+        }, {
             from: './src/img',
             to: '../img',
             toType: 'dir'

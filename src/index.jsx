@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import QuantumAnalyzer from './pages/QuantumAnalyzer';
 import NavBar from "./components/Navbar";
 
+import './main.less';
 
-const menuItems = ['Strona główna', 'O Firmie', 'Nasza Oferta', 'Literatura', 'Cennik', 'Kontakt'];
+const menuItems = ['STRONA GŁÓWNA', 'O FIRMIE', 'NASZA OFERTA', 'LITERATURA', 'CENNIK', 'KONTAKT'];
 ReactDOM.render(
     <div>
         <NavBar menuItems={menuItems}/>

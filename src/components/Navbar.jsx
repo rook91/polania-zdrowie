@@ -10,13 +10,9 @@ const styles = () => ({
     menuItem: {
         display: 'inline',
         color: '#ffffff',
+        'text-align': 'center',
         '&:hover': {
             'background-color': 'rgba(0, 0, 0, 0.0)',
-        },
-    },
-    menuItemText: {
-        '&:hover': {
-            'text-shadow': '1px 1px 4px #EDEDED',
         },
     },
     appBar: {
@@ -31,14 +27,14 @@ class Navbar extends Component {
 
     render() {
         const {classes, menuItems} = this.props;
-
         return (
             <AppBar className={classes.appBar} position="static">
                 <Toolbar>
+                    <img src="img/logo_150_80.png"/>
                     <MenuList>
                         {menuItems.map((name, i) =>
                             (<MenuItem key={i} className={classes.menuItem}>
-                                <strong className={classes.menuItemText}>{name}</strong>
+                                <a>{name}</a>
                             </MenuItem>))
                         }
                     </MenuList>

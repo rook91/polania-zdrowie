@@ -1,0 +1,29 @@
+a {
+  padding: 10px;
+}
+
+a:before, a:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #FFF;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+a:before {
+  top: 0;
+  transform: translateY(10px);
+}
+
+a:after {
+  bottom: 0;
+  transform: translateY(-10px);
+}
+
+a:hover:before, a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
+}
