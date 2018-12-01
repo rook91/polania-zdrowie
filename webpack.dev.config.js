@@ -1,8 +1,8 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const webpack = require('webpack');
+var path = require("path");
 
 module.exports = [{
     entry: './src/index.jsx',
+    mode: 'development',
     module: {
         rules: [
             {
@@ -17,29 +17,24 @@ module.exports = [{
                         ]
                     }
                 }
+            }, {
+                test: /\.less$/,
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader'
+                }, {
+                    loader: 'less-loader'
+                }]
             }
         ]
     },
     resolve: {
         extensions: ['*', '.js', '.jsx']
     },
-    plugins: [
-        new CopyWebpackPlugin([{
-            from: './src/index.html'
-        }]),
-        new webpack.LoaderOptionsPlugin({
-            minimize: true,
-            debug: false
-        }),
-        new webpack.EnvironmentPlugin({
-            NODE_ENV: 'production',
-            DEBUG: false
-        }),
-        new webpack.optimize.ModuleConcatenationPlugin()
-    ],
     output: {
-        path: __dirname + '/dist',
-        publicPath: '/',
+        path: path.resolve(__dirname, "dev"),
+        publicPath: '/assets/',
         filename: 'bundle.js'
     },
 }];
