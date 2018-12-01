@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+import NavItem from "./NavItem";
 
 const styles = () => ({
     menuItem: {
@@ -25,6 +25,11 @@ class Navbar extends Component {
         super(props);
     }
 
+    shouldComponentUpdate(nextProps) {
+        const {menuItems} = this.props;
+        return nextProps.menuItems.length !== menuItems.length;
+    }
+
     render() {
         const {classes, menuItems} = this.props;
         return (
@@ -32,10 +37,8 @@ class Navbar extends Component {
                 <Toolbar>
                     <img src="img/logo_150_80.png"/>
                     <MenuList>
-                        {menuItems.map((name, i) =>
-                            (<MenuItem key={i} className={classes.menuItem}>
-                                <a>{name}</a>
-                            </MenuItem>))
+                        {menuItems.map((conf, i) => (
+                            <NavItem key={i} className={classes.menuItem} config={conf}/>))
                         }
                     </MenuList>
                 </Toolbar>
@@ -46,7 +49,11 @@ class Navbar extends Component {
 
 Navbar.propTypes = {
     classes: PropTypes.object.isRequired,
-    menuItems: PropTypes.arrayOf(PropTypes.string).isRequired,
+    menuItems: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        path: PropTypes.string,
+        displayText: PropTypes.string,
+    })).isRequired,
 };
 
 export default withStyles(styles)(Navbar);

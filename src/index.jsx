@@ -1,15 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import QuantumAnalyzer from './pages/QuantumAnalyzer';
 import NavBar from "./components/Navbar";
+import {RouteProvider, Route} from 'react-router5';
+import createRouter from 'router5';
+import browserPlugin from 'router5/plugins/browser';
+import routes from './config/routes'
+import PageRenderer from './components/PageRenderer';
 
 import './main.less';
 
-const menuItems = ['STRONA GŁÓWNA', 'O FIRMIE', 'NASZA OFERTA', 'LITERATURA', 'CENNIK', 'KONTAKT'];
-ReactDOM.render(
-    <div>
-        <NavBar menuItems={menuItems}/>
-        {/*<QuantumAnalyzer />*/}
-    </div>,
-    document.getElementById('main')
-);
+
+const router = createRouter(routes).usePlugin(browserPlugin({useHash: true}));
+
+router.start(() => {
+    ReactDOM.render(
+        <RouteProvider router={router}>
+            <NavBar menuItems={routes}/>
+            <Route>{({route}) => <PageRenderer route={route}/>}</Route>
+        </RouteProvider>,
+        document.getElementById('main')
+    )
+});
