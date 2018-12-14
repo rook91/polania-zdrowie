@@ -7,6 +7,9 @@ import MenuList from '@material-ui/core/MenuList';
 import NavItem from './NavItem';
 
 const styles = () => ({
+  menuList: {
+    margin: '0 auto',
+  },
   menuItem: {
     display: 'inline',
     color: '#ffffff',
@@ -32,7 +35,7 @@ class Navbar extends Component {
       <AppBar className={classes.appBar} position="static">
         <Toolbar>
           <img alt="logo" src="img/logo_150_80.png" />
-          <MenuList>
+          <MenuList className={classes.menuList}>
             {menuItems.map(conf => (
               <NavItem key={conf.name} className={classes.menuItem} config={conf} />))
             }
